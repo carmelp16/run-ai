@@ -28,3 +28,10 @@ func EmptyIfNull(stringPtr *string) *string {
 	}
 	return stringPtr
 }
+
+func NilIfEmpty(stringPtr *string) *string {
+	if IsEmptyOrNull(stringPtr) {
+		return nil
+	}
+	return stringPtr
+}
